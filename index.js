@@ -4,11 +4,7 @@ const app=express();
 app.set("view engine","hbs")
 
 app.get("/",(req,res)=>{
-    fetch('https://jsonplaceholder.typicode.com/todos')
-      .then(response => response.json())
-      .then(json => 
-        res.send(json)
-    )
+   res.render("index.hbs")
 })
 
 app.get("/login",(req,res)=>{
